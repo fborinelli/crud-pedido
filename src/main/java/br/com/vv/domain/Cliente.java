@@ -1,6 +1,6 @@
 package br.com.vv.domain;
 
-import javax.xml.crypto.Data;
+import java.time.LocalDate;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -16,7 +16,7 @@ public class Cliente {
 	private String nome;
 	
 	@Field
-	private Data dataNascimento;
+	private LocalDate dataNascimento;
 
 	/**
 	 * @return the codigo
@@ -32,18 +32,35 @@ public class Cliente {
 		this.codigo = codigo;
 	}
 
+	
+	
+
 	/**
 	 * @return the dataNascimento
 	 */
-	public Data getDataNascimento() {
+	public LocalDate getDataNascimento() {
 		return dataNascimento;
 	}
 
 	/**
 	 * @param dataNascimento the dataNascimento to set
 	 */
-	public void setDataNascimento(Data dataNascimento) {
+	public void setDataNascimento(LocalDate dataNascimento) {
 		this.dataNascimento = dataNascimento;
+	}
+
+	/**
+	 * @return the nome
+	 */
+	public String getNome() {
+		return nome;
+	}
+
+	/**
+	 * @param nome the nome to set
+	 */
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 	/* (non-Javadoc)
